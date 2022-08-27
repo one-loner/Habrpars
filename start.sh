@@ -11,5 +11,7 @@ echo "Поиск по результатам: "
 read SR
 if [ -n "$SR" ];
 then
-cat result.txt | grep "$SR"
+echo found.txt>found.txt
+cat result.txt | grep "$SR">>found.txt
+less found.txt
 fi
